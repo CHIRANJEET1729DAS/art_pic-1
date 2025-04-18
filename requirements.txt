@@ -6,4 +6,4 @@ python-multipart
 rembg
 onnxruntime
 jinja2
-gunicorn
+uvicorn[gunicorn]
