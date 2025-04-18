@@ -58,4 +58,5 @@ async def upload_image(request: Request, image: UploadFile = File(...), choice: 
 import uvicorn
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
